@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Boot Thymeleaf + Spring Security</title>
+
+    <div th:replace="/fragments/header :: header-css"/>
+
+</head>
+<body>
+
+<div th:replace="/fragments/header :: header"/>
+
+<div class="container">
+
+    <div class="container">
+
+        <!--Show this info message only if posted successfully-->
+        <div class="alert alert-info" th:if="${successMessage}" th:utext="${successMessage}"></div>
+
+        <!--New Post Form-->
+        <div class="row" style="margin-top:20px">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                <form action="#" autocomplete="off" class="form-horizontal"
+                      method="post" role="form" th:action="@{/newPost}"
+                      th:object="${post}">
+
+                    <h2 class="text-center">Write new post</h2>
+
+                    <div class="form-group">
+                        <label class="alert alert-danger" th:errors="*{title}"
+                               th:if="${#fields.hasErrors('title')}"></label>
+                        <input class="form-control input-lg" placeholder="Title" th:field="*{title}"
+                               type="text"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="alert alert-danger" th:errors="*{body}"
+                               th:if="${#fields.hasErrors('body')}"></label>
+                        <textarea class="form-control input-lg" placeholder="Body"
+                                  th:field="*{body}"/>
+                    </div>
+
+                    <input th:field="*{user}" type="hidden"/>
+                    <input th:field="*{id}" type="hidden"/>
+
+                    <div class="form-group">
+                        <input class="btn btn-primary btn-block" type="submit" value="Save"/>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!--Delete Button-->
+        <!--Dont show delete button if the post is brand new-->
+        <div class="row" th:if="${post.id}">
+            <div class="col-md-6 col-md-offset-3">
+                <form action="#" class="form-horizontal" th:action="@{'/post/{id}'(id=${post.id})}"
+                      th:method="delete">
+                    <div class="form-group">
+                        <input name="_method" type="hidden" value="delete"/>
+                        <button class="btn btn-danger btn-block" th:text="Delete" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container -->
+
+<div th:replace="/fragments/footer :: footer"/>
+
+</body>
+</html>
