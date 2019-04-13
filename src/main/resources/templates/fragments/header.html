@@ -1,16 +1,22 @@
-<html xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+<html xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
       xmlns:th="http://www.thymeleaf.org">
 <head>
     <div th:fragment="header-css">
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
         <title>Spring Boot Blog</title>
 
-        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+        <link
+            href="http://cdn.jsdelivr.net/webjars/bootstrap/4.3.1/css/bootstrap.min.css"
               media="screen"
-              rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
+              rel="stylesheet"
+            th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
 
         <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
-                th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+                th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
 
         <link href="../../css/main.css" rel="stylesheet"
               th:href="@{/css/main.css}"/>
@@ -19,31 +25,32 @@
 <body>
 <div th:fragment="header">
     <!-- this is header -->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" th:href="@{/home}">Blog App</a>
             </div>
-            <div class="collapse navbar-collapse navbar-right" id="navbar">
+            <div class="collapse navbar-collapse" id="navbar">
                 <!-- show registration only if user is not yet authenticated -->
-                <ul class="nav navbar-nav" sec:authorize="!isAuthenticated()">
-                    <li class="active"><a th:href="@{/registration}">Registration</a></li>
-                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item active"
+                        sec:authorize="!isAuthenticated()">
+                        <a class="nav-link" th:href="@{/registration}">
+                            Registration</a></li>
                 <!-- show login only if user is not yet authenticated -->
-                <ul class="nav navbar-nav" sec:authorize="!isAuthenticated()">
-                    <li class="active"><a th:href="@{/login}">Login</a></li>
-                </ul>
+                    <li class="nav-item active"
+                        sec:authorize="!isAuthenticated()">
+                        <a class="nav-link" th:href="@{/login}">Login</a></li>
                 <!-- show My Blog only if user is authenticated -->
-                <ul class="nav navbar-nav" sec:authorize="hasRole('USER')">
-                    <li class="active"><a th:href="@{'/blog/' + ${#authentication.getName()}}">My Blog</a></li>
-                </ul>
+                    <li class="nav-item active" sec:authorize="hasRole('USER')">
+                        <a class="nav-link" th:href="@{'/blog/' + ${#authentication.getName()}}">My Blog</a></li>
                 <!-- show new post only if user is authenticated -->
-                <ul class="nav navbar-nav" sec:authorize="hasRole('USER')">
-                    <li class="active"><a th:href="@{/newPost}">New Post</a></li>
-                </ul>
+                    <li class="nav-item active" sec:authorize="hasRole('USER')">
+                        <a class="nav-link" th:href="@{/newPost}">New Post</a></li>
                 <!-- show sign out only if user is authenticated -->
-                <ul class="nav navbar-nav" sec:authorize="isAuthenticated()">
-                    <li class="active"><a th:href="@{/logout}">Sign Out</a></li>
+                    <li class="nav-item active"
+                        sec:authorize="isAuthenticated()">
+                        <a class="nav-link" th:href="@{/logout}">Sign Out</a></li>
                 </ul>
             </div>
         </div>
