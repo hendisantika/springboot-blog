@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -105,6 +106,27 @@ public class PostController {
             }
 
             return "/post";
+
+        } else {
+            return "/error";
+        }
+    }
+
+    @DeleteMapping("/post/{id}")
+    public String deletePostWithId(@PathVariable Long id,
+                                   Principal principal) {
+
+        Optional<Post> optionalPost = postService.findForId(id);
+
+        if (optionalPost.isPresent()) {
+            Post post = optionalPost.get();
+
+            if (isPrincipalOwnerOfPost(principal, post)) {
+                postService.delete(post);
+                return "redirect:/home";
+            } else {
+                return "/403";
+            }
 
         } else {
             return "/error";
