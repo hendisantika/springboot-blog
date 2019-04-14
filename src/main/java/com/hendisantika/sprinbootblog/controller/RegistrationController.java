@@ -1,8 +1,11 @@
 package com.hendisantika.sprinbootblog.controller;
 
+import com.hendisantika.sprinbootblog.model.User;
 import com.hendisantika.sprinbootblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  * Created by IntelliJ IDEA.
@@ -23,4 +26,10 @@ public class RegistrationController {
         this.userService = userService;
     }
 
+    @GetMapping("/registration")
+    public String registration(Model model) {
+
+        model.addAttribute("user", new User());
+        return "/registration";
+    }
 }
