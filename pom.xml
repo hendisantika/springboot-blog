@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hendisantika</groupId>
-    <artifactId>sprinboot-blog</artifactId>
+    <artifactId>springboot-blog</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sprinboot-blog</name>
+    <name>springboot-blog</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
