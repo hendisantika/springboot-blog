@@ -89,6 +89,28 @@ public class PostController {
         }
     }
 
+    @GetMapping("/post/{id}")
+    public String getPostWithId(@PathVariable Long id,
+                                Principal principal,
+                                Model model) {
+
+        Optional<Post> optionalPost = postService.findForId(id);
+
+        if (optionalPost.isPresent()) {
+            Post post = optionalPost.get();
+
+            model.addAttribute("post", post);
+            if (isPrincipalOwnerOfPost(principal, post)) {
+                model.addAttribute("username", principal.getName());
+            }
+
+            return "/post";
+
+        } else {
+            return "/error";
+        }
+    }
+
 
     private boolean isPrincipalOwnerOfPost(Principal principal, Post post) {
         return principal != null && principal.getName().equals(post.getUser().getUsername());
