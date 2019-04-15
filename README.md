@@ -68,3 +68,13 @@ The Spring Boot Maven plugin includes a run goal that can be used to quickly com
 ```
 $ mvn clean spring-boot:run
 ```
+**Using Executable Jar**
+To create an executable jar run:
+```
+$ mvn clean package
+```
+To run that application, use the java -jar command, as follows:
+```
+$ java -jar target/springboot-blog-0.0.1-SNAPSHOT.jar
+```
+To exit the application, press ctrl-c.
