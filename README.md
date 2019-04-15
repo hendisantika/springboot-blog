@@ -63,3 +63,8 @@ Java version: 12, vendor: Azul Systems, Inc., runtime: /Users/hendisantika/.sdkm
 Default locale: en_ID, platform encoding: UTF-8
 OS name: "mac os x", version: "10.14.4", arch: "x86_64", family: "mac"
 ```
+**Using the Maven Plugin**
+The Spring Boot Maven plugin includes a run goal that can be used to quickly compile and run your application. Applications run in an exploded form, as they do in your IDE. The following example shows a typical Maven command to run a Spring Boot application:
+```
+$ mvn clean spring-boot:run
+```
