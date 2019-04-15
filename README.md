@@ -31,8 +31,19 @@ User password: password
 
 ## Maven Wrapper
 **Using the Maven Plugin**
+
 Go to the root folder of the application and type:
 ```
 $ chmod +x mvnw
 $ mvnw clean spring-boot:run
+```
+**Using Executable Jar**
+
+Or you can build the JAR file with
+```
+$ mvnw clean package
+```
+Then you can run the JAR file:
+```
+$ java -jar target/springboot-blog-0.0.1-SNAPSHOT.jar
 ```
