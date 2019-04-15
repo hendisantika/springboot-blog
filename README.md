@@ -15,3 +15,17 @@ User has his own blog page, where he can add new blog posts. Every authenticated
 Folder **src/resources/** contains config files for **blog-demo** Spring Boot application.
 
 **src/resources/application.properties** - main configuration file. Here it is possible to change admin username/password, as well as change the port number.
+
+## How to run
+There are several ways to run the application. You can run it from the command line with included Maven Wrapper, Maven or Docker.
+
+Once the app starts, go to the web browser and visit http://localhost:8080/home
+
+Admin username: naruto
+
+Admin password: password
+
+User username: sasuke
+
+User password: password
+
