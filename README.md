@@ -29,3 +29,10 @@ User username: sasuke
 
 User password: password
 
+## Maven Wrapper
+**Using the Maven Plugin**
+Go to the root folder of the application and type:
+```
+$ chmod +x mvnw
+$ mvnw clean spring-boot:run
+```
