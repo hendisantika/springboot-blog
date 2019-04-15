@@ -47,3 +47,19 @@ Then you can run the JAR file:
 ```
 $ java -jar target/springboot-blog-0.0.1-SNAPSHOT.jar
 ```
+## Maven
+Open a terminal and run the following commands to ensure that you have valid versions of Java and Maven installed:
+```
+$ java -version
+openjdk version "1.8.0_202"
+OpenJDK Runtime Environment (build 1.8.0_202-20190206132754.buildslave.jdk8u-src-tar--b08)
+OpenJDK GraalVM CE 1.0.0-rc14 (build 25.202-b08-jvmci-0.56, mixed mode)
+```
+```
+$ mvn -v
+Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-25T01:41:47+07:00)
+Maven home: /usr/local/Cellar/maven/3.6.0/libexec
+Java version: 12, vendor: Azul Systems, Inc., runtime: /Users/hendisantika/.sdkman/candidates/java/12.0.0-zulu
+Default locale: en_ID, platform encoding: UTF-8
+OS name: "mac os x", version: "10.14.4", arch: "x86_64", family: "mac"
+```
