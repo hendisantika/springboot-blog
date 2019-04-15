@@ -97,4 +97,14 @@ It is possible to run all of the above with helper script:
 $ chmod +x run_docker.sh
 $ run_docker.sh
 ```
- 
+## Docker
+Folder docker contains:
+
+**Dockerfile** - Docker build file for executing blog-demo Docker image. Instructions to build artifacts, copy build artifacts to docker image and then run app on proper port with proper configuration file.
+## Util Scripts
+run_docker.sh.sh - util script for running blog-demo Docker container using docker/Dockerfile
+## Tests
+Tests can be run by executing following command from the root of the project:
+```
+$ mvn test
+```
