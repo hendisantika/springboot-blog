@@ -77,4 +77,17 @@ To run that application, use the java -jar command, as follows:
 ```
 $ java -jar target/springboot-blog-0.0.1-SNAPSHOT.jar
 ```
-To exit the application, press ctrl-c.
+To exit the application, press **ctrl-c**.
+
+**Docker**
+It is possible to run blog-demo using Docker:
+
+Build Docker image:
+```
+$ mvn clean package
+$ docker build -t blog-demo:dev .
+```
+Run Docker container:
+```
+$ docker run --rm -i -p 8080:8080 --name blog-demo springboot-blog-demo:dev
+ ```
