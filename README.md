@@ -90,4 +90,11 @@ $ docker build -t blog-demo:dev .
 Run Docker container:
 ```
 $ docker run --rm -i -p 8080:8080 --name blog-demo springboot-blog-demo:dev
- ```
+```
+Helper script
+It is possible to run all of the above with helper script:
+```
+$ chmod +x run_docker.sh
+$ run_docker.sh
+```
+ 
