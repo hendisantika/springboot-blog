@@ -170,7 +170,15 @@ In `/src/main/resources/application.properties` file it is possible to change bo
 
 ![Blog Post Details](img/details.png "Blog Post Details")
 
+![Blog Post Details](img/blog_details.png "Blog Post Details")
+
+**Edit Blog Post**
+
+![Edit Blog Post](img/edit_post.png "Edit Blog Post")
+
 **User Comments**
 
 ![User Comments](img/comments.png "User Comments")
+
+![Comment](img/comment2.png "Comment")
 
