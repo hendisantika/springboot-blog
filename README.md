@@ -123,3 +123,10 @@ In field **JDBC URL** put
 jdbc:h2:mem:blog_simple_db
 ```
 In `/src/main/resources/application.properties` file it is possible to change both web interface url path, as well as the datasource url.
+
+## Screen shot
+
+Login Page
+
+![Login Page](img/login.png "Login Page")
+

@@ -21,9 +21,9 @@
                   role="form" th:action="@{/registration}" th:object="${user}">
 
                 <div class="form-group">
-                    <label class="alert alert-danger" th:errors="*{name}"
-                           th:if="${#fields.hasErrors('name')}"></label>
-                    <input class="form-control input-lg" placeholder="Name" th:field="*{name}"
+                    <label class="alert alert-danger" th:errors="*{firstName}"
+                           th:if="${#fields.hasErrors('firstName')}"></label>
+                    <input class="form-control input-lg" placeholder="First Name" th:field="*{firstName}"
                            type="text"/>
                 </div>
 
