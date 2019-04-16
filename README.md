@@ -152,6 +152,25 @@ Registration Page
 
 ![Registration Page](img/registration.png "Registration Page")
 
+![Success](img/success.png "Success")
+
 Home Page
 
 ![Home Page](img/home.png "Home Page")
+
+Add New Post
+
+![Add New Post](img/new.png "Add New Post")
+
+User Blog Post
+
+![User Blog Post](img/sasuke.png "User Blog Post")
+
+Blog Post Details
+
+![Blog Post Details](img/details.png "Blog Post Details")
+
+User Comments
+
+![User Comments](img/comments.png "User Comments")
+
