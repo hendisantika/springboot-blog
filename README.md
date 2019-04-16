@@ -124,9 +124,34 @@ jdbc:h2:mem:blog_simple_db
 ```
 In `/src/main/resources/application.properties` file it is possible to change both web interface url path, as well as the datasource url.
 
+**H2 Login**
+
+![H2 Login](img/h2.png "H2 Login")
+
+H2 Home
+
+![H2 Home](img/h2-home.png "H2 Home")
+
+H2 Comments Data
+
+![H2 Comments Data](img/h2-comment.png "H2 Comments Data")
+
+H2 Posts Data
+
+![H2 Posts Data](img/h2-post.png "H2 Posts Data")
+
+
+
 ## Screen shot
 
 Login Page
 
 ![Login Page](img/login.png "Login Page")
 
+Registration Page
+
+![Registration Page](img/registration.png "Registration Page")
+
+Home Page
+
+![Home Page](img/home.png "Home Page")
