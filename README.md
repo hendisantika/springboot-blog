@@ -166,8 +166,8 @@ In `/src/main/resources/application.properties` file it is possible to change bo
 
 ![User Blog Post](img/sasuke.png "User Blog Post")
 
-**Blog Post Details
-**
+**Blog Post Details**
+
 ![Blog Post Details](img/details.png "Blog Post Details")
 
 **User Comments**
